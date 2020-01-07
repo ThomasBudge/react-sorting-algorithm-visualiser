@@ -1,0 +1,35 @@
+.title {
+    background-color: #e1ecf4;
+    padding: 20px 0;
+
+    h1 {
+        margin: 0;
+        color: #05335c;
+    }
+}
+
+input[type=text] {
+    font-size: 30px;
+    border-radius: 4px;
+    padding: 6px 10px;
+    border: 1px solid #eee;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+input[type=submit] {
+    font-size: 30px;
+    border-radius: 4px;
+    padding: 6px 10px;
+    border: 1px solid #eee;
+    margin-left: 4px;
+    background-color: #FFF;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #0b3861;
+        color: #FFF;
+    }
+}
