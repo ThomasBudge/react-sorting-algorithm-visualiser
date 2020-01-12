@@ -2,20 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Number = (props) => {
-  const { number, sorted } = props;
-
-  const styles = {
-    root: {
-      backgroundColor: (sorted === true) ? 'green' : '#F2F2F2',
-      padding: '10px',
-      marginRight: '10px',
-      fontSize: '22px',
-      borderRadius: '2px',
-    },
-  };
+  const { number } = props;
 
   return (
-    <div style={styles.root}>
+    <div className="numbers__number">
       { number }
     </div>
   );

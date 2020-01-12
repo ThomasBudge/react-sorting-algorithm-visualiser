@@ -4,7 +4,7 @@ import AlgorithmVisualiser from './AlgorithmVisualiser';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <AlgorithmVisualiser />
     </div>
   );

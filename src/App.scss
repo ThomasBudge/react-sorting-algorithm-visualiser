@@ -1,35 +1,108 @@
-.title {
-    background-color: #e1ecf4;
-    padding: 20px 0;
+$primary: #5aafee;
+$primaryHover: #4991c9;
+$secondary: #35414a;
 
-    h1 {
-        margin: 0;
-        color: #05335c;
-    }
+.app {
+    background-color: $secondary;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
 }
 
-input[type=text] {
-    font-size: 30px;
-    border-radius: 4px;
-    padding: 6px 10px;
-    border: 1px solid #eee;
+.user-input {
+    padding-left: 30px;
 
-    &:focus {
-        outline: none;
-    }
-}
-
-input[type=submit] {
-    font-size: 30px;
-    border-radius: 4px;
-    padding: 6px 10px;
-    border: 1px solid #eee;
-    margin-left: 4px;
-    background-color: #FFF;
-
-    &:hover {
-        cursor: pointer;
-        background-color: #0b3861;
+    input[type=text] {
+        font-size: 30px;
+        border-radius: 0;
+        padding: 9px 10px;
+        border: none;
+        border-bottom: 3px solid #485761;
+        background-color: transparent;
         color: #FFF;
+    
+        &:focus {
+            outline: none;
+        }
     }
+    
+    input[type=submit] {
+        font-size: 22px;
+        border-radius: 4px;
+        padding: 15px 30px;
+        margin-left: 14px;
+        background-color: $primary;
+        color: #fff;
+        border: none;
+
+        &:focus {
+            outline: none;
+        }
+    
+        &:hover {
+            cursor: pointer;
+            background-color: $primaryHover;
+        }
+    }
+}
+
+.number {
+    background-color: #F2F2F2;
+    padding: 10px;
+    font-size: 70px;
+    margin-right: 8px;
+    border-radius: 4px;
+    min-width: 60px;
+    text-align: center;
+}
+
+.dropdown {
+    &__select {
+        background-color: #485761;
+        color: #FFF;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: none;
+        border-radius: 6px;
+        padding: 15px 40px;
+        font-size: 22px;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.numbers {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    justify-content: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+
+    &__number {
+        background-color: $primary;
+        color: #FFF;
+        padding: 20px;
+        font-size: 60px;
+        border-radius: 6px;
+        margin-right: 6px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $primaryHover;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 30px;
 }

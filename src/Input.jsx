@@ -9,6 +9,7 @@ class Input extends React.Component {
       input: '',
     };
   }
+
   handleChange(e) {
     const input = e.target.value;
     const { setArray } = this.props;
@@ -26,7 +27,7 @@ class Input extends React.Component {
   render() {
     const { input } = this.state;
     return (
-      <div>
+      <div className="user-input">
         <input
           type="text"
           value={input}
