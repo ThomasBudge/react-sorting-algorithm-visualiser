@@ -53,16 +53,36 @@ class AlgorithmVisualiser extends React.Component {
   }
 
   async bubbleSort() {
+    /**
+     * Pseudo Code
+     * ===============================
+     * swap <- false
+     * while !swap:
+     *    for i in A.length:
+     *        swap <- true
+     *        if A[i] > A[i + 1]:
+     *            temp = A[i + 1]
+     *            A[i + 1] <- A[i]
+     *            A[i] <- temp
+     *            swap <- false
+     *
+     * This is the simplest sorting algorithm where
+     * for each itteration, atleast one value is moved to the end.
+     */
     const { array } = this.state;
-
+    // Keep looping until a full sweep has been done without any swaps
+    // as this point we know that the array is sorted.
     while (this.state.swap) {
+      // We assume the array is sorted at this stage and say we have no swaps
       this.setState({ swap: false });
       for (let i = 0; i < array.length; i += 1) {
         await delay(this.state.speed);
+        // If an item is out of order then we swap it
         if (array[i] > array[i + 1]) {
           const temp = array[i];
           array[i] = array[i + 1];
           array[i + 1] = temp;
+          // A swap has occured therefore the array was not in sorted state.
           this.setState({ swap: true, array });
         }
       }
