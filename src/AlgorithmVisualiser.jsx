@@ -18,15 +18,15 @@ class AlgorithmVisualiser extends React.Component {
       algorithms: {
         bubble: {
           title: 'Bubble Sort',
-          method: this.bubbleSort,
+          method: () => this.bubbleSort(),
         },
         insertion: {
           title: 'Insertion Sort',
-          method: this.insertionSort,
+          method: () => this.insertionSort(),
         },
         merge: {
           title: 'Merge Sort',
-          method: this.insertionSort,
+          method: () => this.insertionSort(),
         },
       },
     };
