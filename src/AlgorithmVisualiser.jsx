@@ -14,11 +14,27 @@ class AlgorithmVisualiser extends React.Component {
       array: [],
       speed: 500,
       algorithm: 'bubble',
+      algorithmTitle: 'Bubble Sort',
+      algorithms: {
+        bubble: {
+          title: 'Bubble Sort',
+          method: this.bubbleSort,
+        },
+        insertion: {
+          title: 'Insertion Sort',
+          method: this.insertionSort,
+        },
+        merge: {
+          title: 'Merge Sort',
+          method: this.insertionSort,
+        },
+      },
     };
   }
 
   setAlgorithm(algorithm) {
-    this.setState({ algorithm });
+    const { algorithms } = this.state;
+    this.setState({ algorithmTitle: algorithms[algorithm].title });
   }
 
   setArray(stringArray) {
@@ -31,25 +47,8 @@ class AlgorithmVisualiser extends React.Component {
   }
 
   startSort() {
-    const { algorithm } = this.state;
-
-    switch (algorithm) {
-      case 'bubble':
-        this.bubbleSort();
-        break;
-
-      case 'merge':
-        this.mergeSort();
-        break;
-
-      case 'insertion':
-        this.insertionSort();
-        break;
-
-      default:
-        this.bubbleSort();
-        break;
-    }
+    const { algorithm, algorithms } = this.state;
+    algorithms[algorithm].method();
   }
 
   async bubbleSort() {
@@ -144,20 +143,23 @@ class AlgorithmVisualiser extends React.Component {
 
 
   render() {
+    const { algorithmTitle } = this.state;
+
     return (
       <div>
         <div className="nav">
-          <Dropdown setAlgorithm={(e) => this.setAlgorithm(e)} />
-          <Input
-            setArray={(array) => this.setArray(array)}
-            startSort={() => this.startSort()}
-          />
+          <div className="nav__logo">Sorting Algorithms</div>
+          <Dropdown algorithmTitle={algorithmTitle} setAlgorithm={(e) => this.setAlgorithm(e)} />
         </div>
         <div className="numbers">
           {this.state.array.map((item, i) => (
             <Number sorted={this.state.sorted} key={i} number={item} />
           ))}
         </div>
+        <Input
+          setArray={(array) => this.setArray(array)}
+          startSort={() => this.startSort()}
+        />
       </div>
     );
   }

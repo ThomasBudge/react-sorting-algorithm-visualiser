@@ -1,0 +1,11 @@
+<svg id="Component_1_1" data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <clipPath id="clip-path">
+      <circle id="Ellipse_1" data-name="Ellipse 1" cx="7.5" cy="7.5" r="7.5" transform="translate(-0.45 -0.45)" fill="#fff"/>
+    </clipPath>
+  </defs>
+  <circle id="Ellipse_2" data-name="Ellipse 2" cx="12.5" cy="12.5" r="12.5" fill="#35404a"/>
+  <g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(5.45 6.45)" clip-path="url(#clip-path)">
+    <path id="chevron-down-solid" d="M7.224,16.975.615,10.365a.816.816,0,0,1,0-1.154l.771-.771a.816.816,0,0,1,1.153,0L7.8,13.677l5.263-5.238a.816.816,0,0,1,1.153,0l.771.771a.816.816,0,0,1,0,1.154L8.378,16.975A.816.816,0,0,1,7.224,16.975Z" transform="translate(-0.752 -5.658)" fill="#fff"/>
+  </g>
+</svg>

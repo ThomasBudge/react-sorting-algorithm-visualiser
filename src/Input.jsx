@@ -31,12 +31,12 @@ class Input extends React.Component {
         <input
           type="text"
           value={input}
-          placeholder="Numbers to sort e.g. 1 7 11 42"
+          placeholder="Numbers to sort..."
           onChange={(e) => this.handleChange(e)}
         />
         <input
           type="submit"
-          value="Sort"
+          value="Begin Sorting"
           onClick={() => this.submit()}
         />
       </div>

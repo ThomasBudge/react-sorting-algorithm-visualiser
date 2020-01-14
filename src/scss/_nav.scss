@@ -1,0 +1,38 @@
+.nav {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+
+    &:after {
+        content: '';
+        width: 110%;
+        position: absolute;
+        top: -60px;
+        left: -10px;
+        height: 200px;
+        background-color: #FFF;
+        z-index: -1;
+        transform: rotate(-2deg);
+    }
+
+    &__logo {
+        font-weight: $bold;
+        background-color: $primary;
+        color: #FFF;
+        font-size: 26px;
+        padding: 6px 12px;
+        box-shadow: 0 0 25px -8px rgba(0, 0, 0, .9);
+        transition-duration: 200ms;
+        cursor: pointer;
+        position: relative;
+        top: 30px;
+
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px -2px rgba(0, 0, 0, .3);
+        }
+    }
+}
